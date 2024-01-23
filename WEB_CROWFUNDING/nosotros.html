@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROWDFUNDING - Ayuda a Víctimas de Ocupación</title>
+    <link rel="icon" href="images/Sin título-2.png">
+    <link rel="stylesheet" href="Style_nosotros.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <img src="images/Sin título-2.png" class="logo">
+            <button id="menu-toggle" onclick="toggleButton()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="header-content">
+        <div class="header-txt">
+            <h1>Proyecto de Crowdfunding<br> para Ayudar a Víctimas de Ocupación en España</h1>
+            <p style="text-align: justify;">
+                Somos dos estudiantes de la Universidad Europea de Madrid y estamos llevando a cabo este proyecto con la finalidad de ayudar a las víctimas de ocupación en España. Nuestro objetivo es recaudar dinero para brindarles un espacio seguro, comida y asistencia para trámites legales.
+            </p>
+            <a href="#" class="btn">DONACIÓN</a>
+        </div>
+        <div class="header-img">
+            <img src="images/casa.png" alt="">
+        </div>
+
+      
+
+    <!DOCTYPE html>
+
+
+
+<body>
+    <div class="donation-form">
+        <h2>Formulario de Donaciónhyhh</h2>
+        <form id="donation-form" action="donationProcessor.php" method="post">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="amount">Cantidad:</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="payment-method">Método de Pago:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <button type="submit" class="btn-donate">Donar</button>
+        </form>
+    </div>
+</body>
+
+</html >
+
+
+    <script>
+        function toggleButton() {
+            var navbar = document.querySelector('.navbar');
+
+            // Cambia la visibilidad del navbar mediante la clase 'active' y ajusta la altura y opacidad
+            navbar.classList.toggle('active');
+
+            if (navbar.classList.contains('active')) {
+                navbar.style.display = 'flex';
+                setTimeout(function () {
+                    navbar.style.opacity = '1';
+                    navbar.style.height = 'auto';
+                }, 10);
+            } else {
+                navbar.style.opacity = '0';
+                navbar.style.height = '0';
+
+                // Retrasa el cambio de visibilidad hasta que termine la animación de cierre
+                setTimeout(function () {
+                    navbar.style.display = 'none';
+                }, 500); // Ajusta este valor según la duración de la transición
+            }
+
+            // Agrega un evento para ocultar el menú cuando el ancho de la ventana es mayor a 991px
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 991) {
+                    navbar.style.display = 'initial';
+                    navbar.style.opacity = '1';
+                    navbar.style.height = 'auto';
+                } else {
+                    navbar.style.display = 'none';
+                    navbar.style.opacity = '0';
+                    navbar.style.height = '0';
+                }
+            });
+        }
+                    document.addEventListener('DOMContentLoaded', function () {
+                    var donationForm = document.querySelector('.donation-form');
+
+                    // Oculta el formulario al cargar la página
+                    donationForm.style.display = 'none';
+
+                    // Función para mostrar/ocultar el formulario
+                    function toggleDonationForm() {
+                        donationForm.style.display = (donationForm.style.display === 'none') ? 'block' : 'none';
+                    }
+
+                    // Agrega un evento al enlace de DONACIÓN para mostrar/ocultar el formulario
+                    var donateButton = document.querySelector('.btn');
+                    donateButton.addEventListener('click', toggleDonationForm);
+                });
+
+    </script>
+</body>
+
+</html>
